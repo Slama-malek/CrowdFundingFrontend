@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <link rel="stylesheet" type="text/css" href="%PUBLIC_URL%/style.css" />
+   
+<link rel="stylesheet" type="text/css" href="%PUBLIC_URL%/css/responsive.css" />
+<script src="%PUBLIC_URL%/tinymce/tinymce.min.js"></script>
+<script src="https://cdn.tiny.cloud/1/e6r04q3qi0gu5xgoknlm08in83ftay6rltlrocxofeehs70t/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+
+
+
+
+    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <title>CrowdRif</title>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+    <script src="%PUBLIC_URL%/js/jquery-1.12.4.min.js"></script>
+<script src="%PUBLIC_URL%/libs/popper/popper.js"></script>
+<script src="%PUBLIC_URL%/libs/bootstrap/js/bootstrap.min.js"></script>
+<script src="%PUBLIC_URL%/libs/owl-carousel/owl.carousel.min.js"></script>
+<script src="%PUBLIC_URL%/libs/owl-carousel/carousel.min.js"></script>
+<script src="%PUBLIC_URL%/libs/jquery.countdown/jquery.countdown.min.js"></script>
+<script src="%PUBLIC_URL%/libs/wow/wow.min.js"></script>
+<script src="%PUBLIC_URL%/libs/isotope/isotope.pkgd.min.js"></script>
+<script src="%PUBLIC_URL%/libs/bxslider/jquery.bxslider.min.js"></script>
+<script src="%PUBLIC_URL%/libs/magicsuggest/magicsuggest-min.js"></script>
+<script src="%PUBLIC_URL%/libs/quilljs/js/quill.core.js"></script>
+<script src="%PUBLIC_URL%/libs/quilljs/js/quill.js"></script>
+<script src="%PUBLIC_URL%/tinymce/tinymce.min.js"></script>
+
+<script src="%PUBLIC_URL%/js/main.js"></script>
+<script>
+    	function validate(evt) {
+		  var theEvent = evt || window.event;
+		  var key = theEvent.keyCode || theEvent.which;
+		  key = String.fromCharCode( key );
+		  var regex = /[0-9]|\./;
+		  if( !regex.test(key) ) {
+		    theEvent.returnValue = false;
+		    if(theEvent.preventDefault) theEvent.preventDefault();
+		  }
+		}
+    </script>
+    <script>
+      tinymce.init({
+  selector: 'textarea#basic-example',
+  height: 500,
+  menubar: false,
+  plugins: [
+    'advlist autolink lists link image charmap print preview anchor',
+    'searchreplace visualblocks code fullscreen',
+    'insertdatetime media table paste code help wordcount'
+  ],
+  toolbar: 'undo redo | formatselect | ' +
+  'bold italic backcolor | alignleft aligncenter ' +
+  'alignright alignjustify | bullist numlist outdent indent | ' +
+  'removeformat | help',
+  content_style: 'body { font-family:Helvetica,Arial,sans-serif; font-size:14px }'
+});
+    </script>
+  </body>
+</html>
